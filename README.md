@@ -59,18 +59,14 @@ FastAPI Example
 ------------------
 
 ``` python
-from fastapi import FastAPI
-
-from pulsecheck.core import HealthRegistry
-
-from pulsecheck.core.checks import SQLAlchemyAsyncCheck
-
+from fastapi import FastAPI 
+from pulsecheck.core import HealthRegistry 
+from pulsecheck.core.checks import SQLAlchemyAsyncCheck 
 from pulsecheck.fastapi import make_health_router
 
 app = FastAPI()
 
-registry = HealthRegistry(environment="prod")
-
+registry = HealthRegistry(environment="prod") 
 registry.register(SQLAlchemyAsyncCheck(engine))
 
 app.include_router(make_health_router(registry))
@@ -79,10 +75,8 @@ app.include_router(make_health_router(registry))
 Endpoints:
 
 ```bash 
-GET /health
-
-GET /health/live
-
+GET /health 
+GET /health/live 
 GET /health/ready
 ```
 
@@ -91,14 +85,11 @@ Django Example
 
 ```python 
 
-from pulsecheck.core import HealthRegistry
-
-from pulsecheck.core.checks import DjangoDBCheck
-
+from pulsecheck.core import HealthRegistry 
+from pulsecheck.core.checks import DjangoDBCheck 
 from pulsecheck.django import make_urlpatterns
 
-registry = HealthRegistry(environment="prod")
-
+registry = HealthRegistry(environment="prod") 
 registry.register(DjangoDBCheck())
 
 urlpatterns = [
@@ -115,10 +106,10 @@ Health Response Format
   "timestamp": "2026-02-15T12:34:56Z",
   "environment": "prod",
   "checks": {
-    "database": {
-      "status": "HEALTHY",
-      "response_time_ms": 4.3
-    }
+      "database": {
+          "status": "HEALTHY",
+          "response_time_ms": 4.3
+      }
   }
 }
 ```
@@ -149,7 +140,8 @@ This ensures:
 
 -   Compatibility across service architectures
 
-🛠 Optional Dependencies (Extras)
+
+Optional Dependencies (Extras)
 ---------------------------------
 
 | Extra | Installs |
@@ -162,7 +154,8 @@ This ensures:
 | celery | Celery inspect check |
 | sqlalchemy_async | Async SQLAlchemy check |
 | http | HTTP dependency check |
-🧪 Testing
+
+Testing
 ----------
 
 PulseCheck is tested against:
@@ -177,7 +170,7 @@ PulseCheck is tested against:
 
 * * * * *
 
-🏗 Intended Use
+Intended Use
 ---------------
 
 PulseCheck is designed for:
