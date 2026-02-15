@@ -3,12 +3,12 @@ requires = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "up-health"
+name = "pulsecheck_py"
 version = "0.1.0"
 description = "Unified health/ready endpoints + checks for Up services (Django/FastAPI)."
 readme = "README.md"
 requires-python = ">=3.10"
-authors = [{name="Up Hellas", email="anikolaou@uphellas.gr"}]
+authors = [{name="Tase Nikol", email="anikolaou.ph@gmail.com"}]
 dependencies = []
 
 [project.optional-dependencies]
@@ -32,4 +32,4 @@ all = [
 ]
 
 [tool.setuptools]
-packages = ["up_health"]
+packages = ["pulsecheck_py"]

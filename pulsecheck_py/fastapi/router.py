@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from fastapi import APIRouter, Response
-from pulsecheck.core import HealthRegistry, http_status_from_health
+from pulsecheck_py.core import HealthRegistry, http_status_from_health
 
 
 def make_health_router(registry: HealthRegistry, *, prefix: str = "/health") -> APIRouter:

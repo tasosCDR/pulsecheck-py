@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from django.http import JsonResponse  # type: ignore
-from pulsecheck.core import HealthRegistry, http_status_from_health
+from pulsecheck_py.core import HealthRegistry, http_status_from_health
 
 
 def make_views(registry: HealthRegistry):
