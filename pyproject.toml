@@ -9,6 +9,7 @@ description = "Unified health/ready endpoints + checks for Up services (Django/F
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{name="Tase Nikol", email="anikolaou.ph@gmail.com"}]
+license = {text = "MIT"}
 dependencies = []
 
 [project.optional-dependencies]
