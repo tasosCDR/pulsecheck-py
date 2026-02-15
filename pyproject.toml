@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "up-health"
+version = "0.1.0"
+description = "Unified health/ready endpoints + checks for Up services (Django/FastAPI)."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name="Up Hellas", email="anikolaou@uphellas.gr"}]
+dependencies = []
+
+[project.optional-dependencies]
+fastapi = ["fastapi>=0.100"]
+django = ["Django>=4.2"]
+redis_async = ["redis>=5.0"]
+redis_sync = ["redis>=5.0"]
+rabbitmq = ["kombu>=5.3"]
+celery = ["celery>=5.3"]
+sqlalchemy_async = ["SQLAlchemy>=2.0"]
+http = ["httpx>=0.24"]
+
+all = [
+  "fastapi>=0.100",
+  "Django>=4.2",
+  "redis>=5.0",
+  "kombu>=5.3",
+  "celery>=5.3",
+  "SQLAlchemy>=2.0",
+  "httpx>=0.24"
+]
+
+[tool.setuptools]
+packages = ["up_health"]
