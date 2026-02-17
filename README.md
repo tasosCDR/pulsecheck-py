@@ -39,21 +39,21 @@ It provides a pluggable health engine with adapters for FastAPI and Django, buil
 Install core only:
 
 ```bash
-pip install pulsecheck
+pip install pulsecheck-py
 ```
 Install with FastAPI support:
 ```bash 
-pip install pulsecheck[fastapi]
+pip install pulsecheck-py[fastapi]
 ```
 Install with Django support:
 
 ```bash
-pip install pulsecheck[django]
+pip install pulsecheck-py[django]
 ```
 Install with multiple dependency checks:
 
 ```bash 
-pip install pulsecheck[fastapi,redis_async,sqlalchemy_async,rabbitmq,celery]
+pip install pulsecheck-py[fastapi,redis_async,sqlalchemy_async,rabbitmq,celery]
 ```
 FastAPI Example
 ------------------
