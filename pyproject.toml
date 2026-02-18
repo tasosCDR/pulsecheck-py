@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pulsecheck_py"
-version = "0.1.2"
+version = "0.1.3"
 description = "Unified health/ready endpoints + checks for services (Django/FastAPI)."
 readme = "README.md"
 requires-python = ">=3.10"
