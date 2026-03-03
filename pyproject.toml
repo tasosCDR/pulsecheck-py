@@ -35,5 +35,5 @@ all = [
   "httpx>=0.24"
 ]
 
-[tool.setuptools]
-packages = ["pulsecheck_py"]
+[tool.setuptools] 
+packages = ["pulsecheck"]
