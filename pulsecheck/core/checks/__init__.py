@@ -1,11 +1,14 @@
+from typing import TYPE_CHECKING
 from .base import HealthCheck, CheckConfig
-from .sqlalchemy_async import SQLAlchemyAsyncCheck
-from .django_db import DjangoDBCheck
-from .redis_async import RedisAsyncCheck
-from .redis_sync import RedisSyncCheck
-from .rabbitmq_kombu import RabbitMQKombuCheck
-from .celery_inspect import CeleryInspectCheck
-from .http_dep import HttpDependencyCheck
+
+if TYPE_CHECKING:
+    from .sqlalchemy_async import SQLAlchemyAsyncCheck
+    from .django_db import DjangoDBCheck
+    from .redis_async import RedisAsyncCheck
+    from .redis_sync import RedisSyncCheck
+    from .rabbitmq_kombu import RabbitMQKombuCheck
+    from .celery_inspect import CeleryInspectCheck
+    from .http_dep import HttpDependencyCheck
 
 __all__ = [
     "HealthCheck",
@@ -18,6 +21,7 @@ __all__ = [
     "CeleryInspectCheck",
     "HttpDependencyCheck",
 ]
+
 
 def __getattr__(name: str):
     if name == "SQLAlchemyAsyncCheck":
